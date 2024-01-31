@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import User from "@/components/cards/User";
+import User from "@/components/cards/UserManagementTable";
 import { Filter } from "../ui/Svgs";
 import styles from '../../styles/Home.module.scss'
 import Button from "../ui/Button";

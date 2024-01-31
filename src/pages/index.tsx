@@ -1,8 +1,8 @@
-import Register from '@/components/sections/Register'
+import Login from '@/components/sections/Login'
 export default function Home() {
     return (
         <>
-            <Register />
+            <Login />
         </>
     )
 }

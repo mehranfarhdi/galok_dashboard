@@ -9,7 +9,7 @@ interface Props {
 import { forwardRef } from 'react';
 const Input = (prop: any, ref: any) => {
     return (
-        <input ref={ref} {...prop} />
+        <input ref={ref}  {...prop} />
     );
 }
 export default forwardRef(Input);

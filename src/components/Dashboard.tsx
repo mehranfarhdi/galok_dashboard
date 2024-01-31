@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useUsersQuery } from "@/redux/services/users";
 import { getLocalStorageItem } from "@/helpers/localStorage";
+import UserManagementTable from "@/components/cards/UserManagementTable";
+import CreateUserPage from "@/components/cards/CreateUserPage";
 
 const Dashboard = () => {
     const { data } = useUsersQuery()
@@ -48,24 +50,7 @@ const Dashboard = () => {
             background: "#e018ff1c"
 
         },
-        {
-            icon: <GroupProfileIcon />,
-            text: "Active Users",
-            values: `${filteredArray?.length}`,
-            background: "#5618ff25"
-        },
-        {
-            icon: <DocumentIcon />,
-            text: "Users with Loans",
-            values: `${userWithLoans?.length}`,
-            background: "#f55f4417"
-        },
-        {
-            icon: <DatabaseIcon />,
-            text: "Users with Savings",
-            values: `${userWithSavings?.length}`,
-            background: "#ff336617"
-        },
+
     ]
 
     return (
@@ -77,13 +62,17 @@ const Dashboard = () => {
                     <div className={styles.users} >
                         <h1 className={styles.users__title}>Users</h1>
                         <div className={styles.users__records}>
+                            <CreateUserPage/>
+
                             {filteredArray && userRecords.map((record, index) => {
                                 return (
                                     <UserRecordCount key={index} background={record.background} icon={record.icon} text={record.text} count={record.values} />
                                 )
                             })}
+
                         </div>
-                        <UsersTable />
+                        <UserManagementTable/>
+
                     </div>
                 </div>
             </section>

@@ -21,30 +21,6 @@ const Sidebar = () => {
             icon: <Users />,
             text: 'Guarantors'
         },
-        {
-            icon: <LoansIcon />,
-            text: 'Loans'
-        },
-        {
-            icon: <DecisionIcon />,
-            text: 'Decision Models'
-        },
-        {
-            icon: <SavingsIcon />,
-            text: 'Savings'
-        },
-        {
-            icon: <LoanRequestIcon />,
-            text: 'Loan Requests'
-        },
-        {
-            icon: <WhitelistIcon />,
-            text: 'Whitelist'
-        },
-        {
-            icon: <KarmaIcon />,
-            text: 'Karma'
-        },
 
     ]
 
@@ -114,8 +90,8 @@ const Sidebar = () => {
             <SidebarItem icon={<Briefcase />} text="switch organisatin" />
             <SidebarItem icon={<Home />} text="Dashboard" />
             <SidebarCategory category={customerItems} title={"customers"} />
-            <SidebarCategory category={businessesItems} title={"businesses"} />
-            <SidebarCategory category={settingsItems} title={"Settings"} />
+            {/*<SidebarCategory category={businessesItems} title={"businesses"} />*/}
+            {/*<SidebarCategory category={settingsItems} title={"Settings"} />*/}
           </div> 
 
         }
